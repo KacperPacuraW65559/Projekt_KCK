@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Akordy</h1>
+<table>
+    <tr>
+        <th>Nazwa akordu</th>
+        <th>Graficzna reprezentacja</th>
+    </tr>
+    {% for chord in chords %}
+    <tr>
+        <td>{{ chord.name }}</td>
+        <td><img src="{{ chord.image }}" alt="{{ chord.name }}"></td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{{ url_for('library') }}">Wróc do biblioteki</a>
+{% endblock %}

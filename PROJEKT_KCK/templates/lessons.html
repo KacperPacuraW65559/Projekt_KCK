@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Wszystkie lekcje</h1>
+<p>Tutaj znajdują się wszystkie lekcje. Wybierz interesujący cię temat lub zacznij kurs od początku. Miłego grania!</p>
+<table>
+    <tr>
+        <th>Lekcja</th>
+        <th>Krótki opis</th>
+        <th>Zakładka</th>
+        <th>Ukończona lekcja</th>
+        <th>Opcje zakładek i ukończenia lekcji</th>
+    </tr>
+    {% for lesson in lessons %}
+    <tr>
+        <td><a href="{{ url_for('lesson_detail', lesson_id=lesson.id) }}">{{ lesson.name }}</a></td>
+        <td>{{ lesson.description }}</td>
+        <td>{{ 'Tak' if lesson.bookmarked else 'Nie' }}</td>
+        <td>{{ 'Tak' if lesson.completed else 'Nie' }}</td>
+        <td>
+            <a href="{{ url_for('add_bookmark', lesson_id=lesson.id) }}"><button class="bookmark">Dodaj zakładkę</button></a>
+            <a href="{{ url_for('remove_bookmark', lesson_id=lesson.id) }}"><button class="remove">Usuń zakładkę</button></a>
+            <a href="{{ url_for('complete_lesson', lesson_id=lesson.id) }}"><button class="complete">Lekcja ukończona</button></a>
+            <a href="{{ url_for('uncomplete_lesson', lesson_id=lesson.id) }}"><button class="uncomplete">Lekcja nieukończona</button></a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{{ url_for('home') }}">Wróc do strony domowej</a>
+{% endblock %}

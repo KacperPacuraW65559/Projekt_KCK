@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metronom</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Metronom</h1>
+    <p>Wybierz BPM(ang. beats per minute) - tempo do ćwiczeń, następnie graj równo do odtwarzanego dźwięku.</p>
+    <div class="metronome-container">
+        <p class="tempo-display">Tempo: <span id="tempoDisplay">120</span> BPM</p>
+        <input type="range" id="tempoSlider" class="tempo-slider" min="40" max="240" value="120">
+        <button id="startMetronomeBtn">Start</button>
+        <button id="stopMetronomeBtn">Stop</button>
+    </div>
+
+    <audio id="metronomeTick">
+        <source src="{{ url_for('static', filename='audio/metronome_click.wav') }}" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="{{ url_for('static', filename='js/metronome.js') }}"></script>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Biblioteka akordow i skal</h1>
+<p>Znajdziesz tu różne akordy oraz skale, które możesz użyć do ćwiczeń oraz gry utworów muzycznych.</p>
+<div id="chords-scales-options">
+    <a href="{{ url_for('chords') }}"><button class="library-btn">Akordy</button></a>
+    <a href="{{ url_for('scales') }}"><button class="library-btn">Skale</button></a>
+</div>
+<a href="{{ url_for('home') }}">Wróc do strony domowej</a>
+{% endblock %}

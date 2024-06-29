@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikacja do nauki gry</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <a href="{{ url_for('home') }}">Strona domowa</a> | 
+            <a href="{{ url_for('lessons') }}">Lekcje</a> |
+            <a href="{{ url_for('library') }}">Biblioteka akordów i skal</a> |
+            <a href="{{ url_for('metronome') }}">Metronom</a>
+        </nav>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

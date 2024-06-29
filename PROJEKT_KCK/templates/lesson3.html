@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Lekcja 3 - zaawansowane techniki gry</h1>
+
+<section class="lesson-content">
+    <h2>Wprowadzenie do Zaawansowanych Technik Gry</h2>
+    <p>W tej lekcji omówimy dwie zaawansowane techniki gry na gitarze: sweep picking i legato. Techniki te pozwalają na szybkie i płynne granie, które jest charakterystyczne dla wielu stylów muzycznych, szczególnie metalu i rocka.</p>
+    
+    <h2>Sweep Picking</h2>
+    <p>Sweep picking to technika, która polega na szybkim przemieszczeniu kostki w jednym kierunku przez kilka strun (najpierw w dół, następnie powrót w górę), tworząc efekt płynnego, arpeggiowanego dźwięku. Jest to trudna technika, która wymaga dużo praktyki, ale jest niezwykle efektowna.</p>
+    
+    <h3>Ćwiczenie Sweep Picking</h3>
+    <p>Spróbuj zagrać poniższy fragment przy użyciu techniki sweep picking. Zacznij powoli i stopniowo zwiększaj tempo, aby opanować płynność ruchu:</p>
+    <img src="{{ url_for('static', filename='images/sweep_tab_ex1.png') }}" alt="Ćwiczenie Sweep Picking" class="lesson-image">
+
+    <h2>Legato</h2>
+    <p>Legato to technika polegająca na grze na gitarze za pomocą hammer-on i pull-off, bez ponownego uderzania struny kostką. Ta technika pozwala na uzyskanie bardzo płynnych przejść między dźwiękami.</p>
+    
+    <h3>Ćwiczenie Legato</h3>
+    <p>Poniżej znajduje się fragment do ćwiczenia techniki legato. Skoncentruj się na płynności przejść między dźwiękami:</p>
+    <img src="{{ url_for('static', filename='images/legato_tab_ex1.png') }}" alt="Ćwiczenie Legato" class="lesson-image">
+
+    <h2>Podsumowanie</h2>
+    <p>Techniki sweep picking i legato są zaawansowanymi technikami gry na gitarze, które wymagają dużo praktyki. Regularne ćwiczenie tych technik pozwoli Ci na rozwinięcie szybkości i płynności gry, co jest kluczowe dla wielu gatunków muzycznych.</p>
+
+    <a href="{{ url_for('lessons') }}">Wróc do lekcji</a>
+</section>
+{% endblock %}

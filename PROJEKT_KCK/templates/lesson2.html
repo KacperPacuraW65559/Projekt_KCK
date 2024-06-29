@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Lekcja 2 - Kostkowanie naprzemienne</h1>
+
+<section class="lesson-content">
+    <h2>Wprowadzenie do Kostkowania Naprzemiennego</h2>
+    <p>Kostkowanie naprzemienne, znane również jako alternate picking, to technika gry na gitarze polegająca na naprzemiennym uderzaniu struny kostką w dół i w górę. Jest to podstawowa i powszechna technika używana przez gitarzystów, która pozwala na szybkie i płynne granie.</p>
+    
+    <h2>Podstawy Kostkowania Naprzemiennego</h2>
+    <p>Aby rozpocząć kostkowanie naprzemienne, postępuj zgodnie z poniższymi krokami:</p>
+    <ul>
+        <li>Trzymaj kostkę, między kciukiem a palcem wskazującym tak aby było ci z nią wygodnie.</li>
+        <li>Uderzaj struny naprzemiennie: najpierw w dół (ang. downstroke), a potem w górę (ang. upstroke).</li>
+        <li>Utrzymuj równy rytm i staraj się, aby każde uderzenie było wykonane z jednakowo siłą.</li>
+        <li>Zacznij powoli i stopniowo zwiększaj tempo, gdy poczujesz się pewniej.</li>
+    </ul>
+    
+    <h2>Ćwiczenia Kostkowania Naprzemiennego</h2>
+    <p>Poniżej znajdują się dwa ćwiczenia, które pomogą Ci opanować tą technikę:</p>
+    
+    <h3>Ćwiczenie 1</h3>
+    <p>Zagraj poniższy fragment przy użyciu kostkowania naprzemiennego. Zacznij od niskiego tempa i stopniowo je zwiększaj:</p>
+    <img src="{{ url_for('static', filename='images/alternate_tab_ex1.png') }}" alt="Ćwiczenie 1: Alternate Picking" class="lesson-image">
+    
+    <h3>Ćwiczenie 2</h3>
+    <p>Kontynuuj ćwiczenie, grając kolejne fragmenty przy użyciu kostkowania naprzemiennego. Pamiętaj o utrzymaniu równomiernego rytmu:</p>
+    <img src="{{ url_for('static', filename='images/alternate_tab_ex2.png') }}" alt="Ćwiczenie 2: Alternate Picking" class="lesson-image">
+
+    <h2>Podsumowanie</h2>
+    <p>Kostkowanie naprzemienne to kluczowa technika dla każdego gitarzysty. Regularne ćwiczenie pozwoli Ci ją opanować i wykorzystać w wielu różnych stylach muzycznych. Pamiętaj, aby zawsze zaczynać od niskiego tempa i stopniowo je zwiększać, aby zapewnić dokładność i płynność gry.</p>
+
+    <a href="{{ url_for('lessons') }}">Wróc do lekcji</a>
+</section>
+{% endblock %}

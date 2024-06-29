@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header>
+    <img src="{{ url_for('static', filename='images/Logo_apka_gitarowa.png') }}" alt="Logo">
+</header>
+<h1>Witamy w aplikacji webowej do nauki gry na gitarze!</h1>
+<footer>
+    <section id="about">
+        <h2>Kilka słów o naszej aplikacji</h2>
+        <p>Witamy w jednej z najlepszych polskich stron pomagających w nauce gry na gitarze. Z naszymi lekcjami 
+            oraz materiałami dodatkowymi możesz łatwo uczyć się w swoim tempie aby nauczyć się wszystkiego co 
+            można o grze na gitarze. Oferujemy:</p>
+        <ul>
+            <li>Bardzo szeroki wachlarz lekcji dla użytkowników z różnym doświadczeniem w grze</li>
+            <li>Metronom pomagający w ćwiczeniach</li>
+            <li>Rozbudowaną bibliotekę akordów i skal</li>
+        </ul>
+    </section>
+    <section id="testimonials">
+        <h2>Opinie naszych użytkowników</h2>
+        <blockquote>"Ta aplikacja bardzo pomogła mi w nauce! Lekcje są świetnie wytłumaczone oraz jest dużo materiałów do ćwiczeń." - Michał</blockquote>
+        <blockquote>"Super aplikacja, zdecydowanie warta polecenia!" - Anna</blockquote>
+    </section>
+    <section id="stats">
+        <h2>Społeczność</h2>
+        <p>Dołącz do ponad 1000 osób, które już uczą się poprzez naszą aplikację. Mamy ponad 150 lekcji, cały czas dodawane są nowe tematy.</p>
+    </section>
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <p>Jeśli masz jakieś pytania lub potrzebujesz pomocy, skontaktuj się z nami poprzez poniższy adres e-mail:<br>
+        AplikacjaGitarowaSupport@kontakt.com</p>
+    </section>
+</footer>
+{% endblock %}

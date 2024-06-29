@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Skale muzyczne</h1>
+<table>
+    <tr>
+        <th>Nazwa skali</th>
+        <th>Graficzna reprezentacja</th>
+    </tr>
+    {% for scale in scales %}
+    <tr>
+        <td>{{ scale.name }}</td>
+        <td><img src="{{ scale.image }}" alt="{{ scale.name }}"></td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{{ url_for('library') }}">Wróc do biblioteki</a>
+{% endblock %}

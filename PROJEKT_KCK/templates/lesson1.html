@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Lekcja 1 - Wstęp do nauki gry</h1>
+
+<section class="lesson-content">
+    <h2>Budowa Gitary</h2>
+    <p>Gitara jest złożona z kilku głównych części:</p>
+    <ul>
+        <li><strong>Korpus:</strong> Część rezonansowa, która wzmacnia dźwięk.</li>
+        <li><strong>Gryf:</strong> Część, na której znajdują się progi i struny.</li>
+        <li><strong>Progi:</strong> Metalowe elementy na gryfie, które dzielą go na sekcje.</li>
+        <li><strong>Struny:</strong> Generują dźwięk przez wibracje.</li>
+        <li><strong>Mostek:</strong> Element, który trzyma struny na korpusie.</li>
+        <li><strong>Główka:</strong> Górna część gryfu, gdzie znajdują się klucze do strojenia.</li>
+    </ul>
+    <img src="{{ url_for('static', filename='images/guitar_build.png') }}" alt="Budowa Gitary" class="lesson-image">
+
+    <h2>Dźwięki na gryfie</h2>
+    <p>Na gryfie gitary znajduje się 12 dźwięków, które można zagrać w różnych oktawach. Poniżej znajduje się obrazek przedstawiający dźwięki na gryfie:</p>
+    <img src="{{ url_for('static', filename='images/fretboard_notes.png') }}" alt="Dźwięki na Gryficie" class="lesson-image">
+
+    <h2>Gra na Gitarze</h2>
+    <p>Gra na gitarze polega na naciskaniu strun na progach, aby uzyskać dźwięk. Poniżej znajduje się kilka podstawowych wskazówek, o których warto pamiętać:</p>
+    <ul>
+        <li><strong>Strojenie:</strong> Przed rozpoczęciem gry upewnij się, że gitara jest dobrze nastrojona.</li>
+        <li><strong>Chwyty:</strong> Naucz się podstawowych chwytów akordów, takich jak C, G, D, Am, Em.</li>
+        <li><strong>Dobre nawyki:</strong> Pamiętaj, aby prawidłowo układać dłonie lewej ręki na gryfie, jak i prawej ręki przy uderzaniu strun.</li>
+        <li><strong>Ćwiczenie:</strong> Tylko regularne ćwiczenie może zagwarantować opanowanie gry na gitarze.</li>
+    </ul>
+
+    <h2>Ćwiczenie</h2>
+    <p>Aby lepiej zapamiętać budowę gitary i dźwięki na gryfie, wykonaj poniższe ćwiczenie:</p>
+    <ol>
+        <li>Zapamiętaj nazwy wszystkich części gitary.</li>
+        <li>Znajdź wszystkie dźwięki na gryfie do 12 progu i spróbuj je zapamiętać.</li>
+        <li>Zagraj podstawowe akordy C, G, D, Am, Em, trzymając prawidłową pozycję dłoni.</li>
+    </ol>
+    <p>Regularne powtarzanie tych ćwiczeń pomoże Ci szybko opanować podstawy gry na gitarze.</p>
+
+    <a href="{{ url_for('lessons') }}">Wróc do lekcji</a>
+</section>
+{% endblock %}
